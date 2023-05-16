@@ -1,0 +1,25 @@
+function poolDay(input) {
+  let peopleNumber = Number(input[0]);
+  let entrancePrice = Number(input[1]);
+  let loungeChairPrice = Number(input[2]);
+  let sunUmbrellaPrice = Number(input[3]);
+
+  let sunUmbrellaNeeded = Number(peopleNumber / 2);
+  let loungeChairNeeded = Number(0.75 * peopleNumber);
+
+  let sunUmbrellaNeededRound = Math.ceil(sunUmbrellaNeeded);
+  let loungeChairNeededRound = Math.ceil(loungeChairNeeded);
+
+  let entranceTotalPrice = peopleNumber * entrancePrice;
+  let loungeChairTotalPrice = loungeChairNeededRound * loungeChairPrice;
+  let sunUmbrellaTotalPrice = sunUmbrellaNeededRound * sunUmbrellaPrice;
+
+  let totalPrice =
+    entranceTotalPrice + loungeChairTotalPrice + sunUmbrellaTotalPrice;
+
+  let totalPriceFinal = totalPrice.toFixed(2);
+
+  console.log(totalPriceFinal + " lv.");
+}
+
+poolDay(["21", "5.50", "4.40", "6.20"]);
