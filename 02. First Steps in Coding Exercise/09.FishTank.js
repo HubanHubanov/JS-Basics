@@ -6,7 +6,7 @@ function fishTank(input) {
 
   let volume = lenght * width * height;
   let volumeLiters = volume / 1000;
-  let waterVolume = volumeLiters - 0.17 * volumeLiters;
+  let waterVolume = volumeLiters - (sandPercentage * volumeLiters * 0.01);
 
   console.log(waterVolume);
 }
