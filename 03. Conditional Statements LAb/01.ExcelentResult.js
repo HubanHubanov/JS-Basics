@@ -1,9 +1,8 @@
 function excelentResult(input) {
-    grade = Number(input[0]);
-    if (grade >= 5.5) {
-      console.log("Excellent!");
-    }
+  grade = Number(input[0]);
+  if (grade >= 5.5) {
+    console.log("Excellent!");
   }
-  
-  excelentResult(["5.50"]);
-  
+}
+
+excelentResult(["5.50"]);
