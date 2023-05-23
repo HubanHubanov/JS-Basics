@@ -10,13 +10,13 @@ function fruitMarket(input) {
   let orangesPrice = 0.6 * raspberriesPrice;
   let bananasPrice = 0.2 * raspberriesPrice;
 
-  let strawnberriesCost = strawnberriesPrice * strawberriesQuantity;
+  let strawberriesCost = strawnberriesPrice * strawberriesQuantity;
   let bananasCost = bananasPrice * bananasQuantity;
   let orangesCost = orangesPrice * orangesQuantity;
   let raspberriesCost = raspberriesPrice * raspberriesQuantity;
 
   let totalCost =
-    strawnberriesCost + bananasCost + orangesCost + raspberriesCost;
+    strawberriesCost + bananasCost + orangesCost + raspberriesCost;
 
   let totalCostFix = totalCost.toFixed(2);
 
