@@ -24,7 +24,7 @@ function football(input) {
   if (homeTeamResultFromMatchTwo > guestTeamResultFromMatchTwo) {
     wonMatchesCount += 1;
   } else if (homeTeamResultFromMatchTwo === guestTeamResultFromMatchTwo) {
-    drawMatchesCount = +1;
+    drawMatchesCount += 1;
   } else if (homeTeamResultFromMatchTwo < guestTeamResultFromMatchTwo) {
     lostMatchesCount += 1;
   }
@@ -36,8 +36,7 @@ function football(input) {
     wonMatchesCount += 1;
   } else if (homeTeamResultFromMatchThree === guestTeamResultFromMatchThree) {
     drawMatchesCount += 1;
-  }
-   else if (homeTeamResultFromMatchThree < guestTeamResultFromMatchThree) {
+  } else if (homeTeamResultFromMatchThree < guestTeamResultFromMatchThree) {
     lostMatchesCount += 1;
   }
 
