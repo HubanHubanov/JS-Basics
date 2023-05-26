@@ -10,7 +10,7 @@ function fuelTank(input) {
     } else if (fuelType === "Gas") {
       console.log(`You have enough gas.`);
     } else {
-      console.log("Invalid fuel!    ");
+      console.log("Invalid fuel!");
     }
   } else {
     if (fuelType === "Diesel") {
