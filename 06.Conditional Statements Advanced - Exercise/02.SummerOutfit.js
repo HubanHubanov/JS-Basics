@@ -2,42 +2,47 @@ function summerOutfit(input) {
   let degrees = Number(input[0]);
   let time = input[1];
 
+  let outfit = 0;
+  let shoes = 0;
+
   switch (time) {
     case "Morning":
       if (degrees >= 10 && degrees <= 18) {
-        console.log(
-          `It's ${degrees} degrees, get your Sweatshirt and Sneakers.`
-        );
+        outfit = "Sweatshirt";
+        shoes = "Sneakers";
       } else if (degrees > 18 && degrees <= 24) {
-        console.log(`It's ${degrees} degrees, get your Shirt and Moccasins.`);
+        outfit = "Shirt";
+        shoes = "Moccasins";
       } else if (degrees >= 25) {
-        console.log(`It's ${degrees} degrees, get your T-Shirt and Sandals.`);
+        outfit = "T-Shirt";
+        shoes = "Sandals";
       }
       break;
     case "Afternoon":
       if (degrees >= 10 && degrees <= 18) {
-        console.log(`It's ${degrees} degrees, get your Shirt and Moccasins.`);
+        outfit = "Shirt";
+        shoes = "Moccasins";
       } else if (degrees > 18 && degrees <= 24) {
-        console.log(`It's ${degrees} degrees, get your T-Shirt and Sandals.`);
+        outfit = "T-Shirt";
+        shoes = "Sandals";
       } else if (degrees >= 25) {
-        console.log(
-          `It's ${degrees} degrees, get your Swim Suit and Barefoot.`
-        );
+        outfit = "Swim Suit";
+        shoes = "Barefoot";
       }
       break;
     case "Evening":
-      if (degrees >= 10 && degrees <= 18) {
-        console.log(`It's ${degrees} degrees, get your Shirt and Moccasins.`);
-      } else if (degrees > 18 && degrees <= 24) {
-        console.log(`It's ${degrees} degrees, get your Shirt and Moccasins.`);
-      } else if (degrees >= 25) {
-        console.log(
-          `It's ${degrees} degrees, get your Shirt and Moccasins.`
-        );
+      if (
+        (degrees >= 10 && degrees <= 18) ||
+        (degrees > 18 && degrees <= 24) ||
+        degrees >= 25
+      ) {
+        outfit = "Shirt";
+        shoes = "Moccasins";
       }
       break;
     default:
       break;
   }
+  console.log(`It's ${degrees} degrees, get your ${outfit} and ${shoes}.`);
 }
-summerOutfit(["22", "Afternoon"]);
+summerOutfit(["22", "Morning"]);
