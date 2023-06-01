@@ -1,0 +1,37 @@
+function bike(input) {
+  let juniorsNum = Number(input[0]);
+  let seniorsNum = Number(input[1]);
+  let type = input[2];
+  let juniorsTax = 0;
+  let seniorsTax = 0;
+
+  switch (type) {
+    case "trail":
+      juniorsTax = 5.5;
+      seniorsTax = 7.0;
+      break;
+    case "cross-country":
+      juniorsTax = 8.0;
+      seniorsTax = 9.5;
+      if (juniorsNum + seniorsNum >= 50) {
+        juniorsTax *= 0.75;
+        seniorsTax *= 0.75;
+      }
+      break;
+    case "downhill":
+      juniorsTax = 12.25;
+      seniorsTax = 13.75;
+      break;
+    case "road":
+      juniorsTax = 20.0;
+      seniorsTax = 21.5;
+      break;
+  }
+
+  tax = juniorsNum * juniorsTax + seniorsNum * seniorsTax;
+
+  let profit = 0.95 * tax;
+
+  console.log(profit.toFixed(2));
+}
+bike(["30", "25", "cross-country"]);
