@@ -1,5 +1,6 @@
 function sumOfNubers(input) {
-  let numberAsText = input[0].toString();
+  let numberAsText = input[0];
+  numberAsText += ""
   let sum = 0;
 
   for (let i = 0; i < numberAsText.length; i++) {
