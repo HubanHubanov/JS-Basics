@@ -6,11 +6,13 @@ function solve(input) {
     let x = Number(input[4]);
     let y = Number(input[5]);
 
-   
+   if (true && true) {
 
-if ((x === x1 || x === x2 ) && y >= y1 && y <= y2) {
-    console.log("Border");
-} else if ((y === y1 || y === y2) && x >= x1 && x <= x2) {
+   }
+
+if ((x === x1 || x === x2)  && (y >= y1 && y <= y2)) {
+    console.log("Border"); 
+} else if ((y === y1 || y === y2) && (x >= x1 && x <= x2)) {
     console.log("Border");
 } else {
     console.log("Inside / Outside");
