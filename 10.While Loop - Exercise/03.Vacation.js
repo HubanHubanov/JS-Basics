@@ -11,7 +11,7 @@ function vacation(input) {
   let money = Number(input[index]);
   index++;
 
-  consecutiveDaysSpending = 0;
+  let consecutiveDaysSpending = 0;
   let daysTotal = 0;
 
   let savedSum = moneyAvailabe;
