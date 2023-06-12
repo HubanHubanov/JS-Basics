@@ -4,29 +4,29 @@ function cake(input) {
   index++;
   let cakeLength = Number(input[index]);
   index++;
-  let cakePeaces = cakeWidth * cakeLength;
+  let cakePieces = cakeWidth * cakeLength;
 
-  let peacesTaken = 0;
+  let piecesTaken = 0;
 
   let flag = false;
 
-  while (peacesTaken < cakePeaces) {
+  while (piecesTaken < cakePieces) {
     let command = input[index];
     index++;
 
     if (command === "STOP") {
       flag = true;
-      console.log(`${cakePeaces - peacesTaken} pieces are left.`);
+      console.log(`${cakePieces - piecesTaken} pieces are left.`);
       break;
     }
 
     let peaces = Number(command);
-    peacesTaken += peaces;
+    piecesTaken += peaces;
   }
 
   if (!flag) {
     console.log(
-      `No more cake left! You need ${peacesTaken - cakePeaces} pieces more.`
+      `No more cake left! You need ${piecesTaken - cakePieces} pieces more.`
     );
   }
 }
