@@ -13,9 +13,9 @@ function equalSumsEvenOddPosition(input) {
       let ch = Number(buff[j]);
 
       if (j % 2 === 0) {
-        oddSum += ch;
-      } else {
         evenSum += ch;
+      } else {
+        oddSum += ch;
       }
     }
 
