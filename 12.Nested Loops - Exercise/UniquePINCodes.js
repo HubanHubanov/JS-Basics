@@ -19,26 +19,19 @@ for (j = 1; j <= num2; j ++)
    }
    if (noPrime) {
     console.log(j);
-   }
-
-
-   
+   } 
    
     for(let i = 1; i <= num1; i++) {
         if (i % 2 !== 0) {
                continue;     
         } 
         for(let j = 1; j <=num2; j++) {
-            
-           
-    
-
-           
+                   
             for(let k = 1; k <= num3; k++) {
                 if (k % 2 !== 0) {
                     continue;
                 } 
-               // console.log(`${i} ${j} ${k} `);
+               console.log(`${i} ${j} ${k} `);
             
             }
         }
@@ -47,4 +40,4 @@ for (j = 1; j <= num2; j ++)
     }
 
 
-uniquePinCodes(["3", "5", "5"]);
+uniquePinCodes([3, 5, 5]);

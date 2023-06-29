@@ -9,16 +9,22 @@ function suitcasesLoad(input) {
   let isFull = false;
 
   while (currentInput !== "End") {
+    suitcasesCounter++;
+
     let suitcaseVolume = Number(currentInput);
+
+    if (suitcasesCounter % 3 === 0) {
+      suitcaseVolume *= 1.1;
+    }
+
     usedVolume += suitcaseVolume;
 
     if (usedVolume > freeSpace) {
+      suitcasesCounter--;
       isFull = true;
       console.log(`No more space!`);
       break;
     }
-
-    suitcasesCounter++;
 
     index++;
     currentInput = input[index];
