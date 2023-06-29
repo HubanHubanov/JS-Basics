@@ -4,8 +4,22 @@ function uniquePinCodes(input) {
     let num2 = Number(input[1]);
     let num3 = Number(input[2]);
 
-   // let number = Number(input[2]);
+   let  noPrime = false;
 
+
+
+
+for (j = 1; j <= num2; j ++)
+   for (index = 2; index < j; index++) {
+    if (j % index === 0) {
+        noPrime = true;
+        break;
+    }
+    
+   }
+   if (noPrime) {
+    console.log(j);
+   }
 
 
    
@@ -15,10 +29,7 @@ function uniquePinCodes(input) {
                continue;     
         } 
         for(let j = 1; j <=num2; j++) {
-            for(let primeCheck = 2; primeCheck < j; primeCheck++) {
-                if ( j % primeCheck === 0 ) {
-                continue;
-                }
+            
            
     
 
@@ -27,13 +38,13 @@ function uniquePinCodes(input) {
                 if (k % 2 !== 0) {
                     continue;
                 } 
-                console.log(`${i} ${j} ${k} `);
+               // console.log(`${i} ${j} ${k} `);
             
             }
         }
     }
 
     }
-}
+
 
 uniquePinCodes(["3", "5", "5"]);
