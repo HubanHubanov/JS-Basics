@@ -12,7 +12,7 @@ function amazingNumbers(number) {
   for (let i = 0; i < sumToString.length; i++) {
     let currentNumber = Number(sumToString[i]);
 
-    if (currentNumber % 9 === 0) {
+    if (currentNumber  === 9) {
       isAmazing = true;
       break;
     }
