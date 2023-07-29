@@ -1,7 +1,7 @@
 function amazingNumbers(number) {
   let numberToString = number.toString();
   let sum = 0;
-  let isAmazing = false;
+  let isAmazing = "False";
 
   for (let i = 0; i < numberToString.length; i++) {
     let currentNumber = Number(numberToString[i]);
@@ -12,16 +12,13 @@ function amazingNumbers(number) {
   for (let i = 0; i < sumToString.length; i++) {
     let currentNumber = Number(sumToString[i]);
 
-    if (currentNumber  === 9) {
-      isAmazing = true;
+    if (currentNumber === 9) {
+      isAmazing = "True";
       break;
     }
   }
-  if (isAmazing) {
-    console.log(`${number} Amazing? True`);
-  } else {
-    console.log(`${number} Amazing? False`);
-  }
+
+  console.log(`${number} Amazing? ${isAmazing}`);
 }
 
-amazingNumbers(999);
+amazingNumbers(1233);
