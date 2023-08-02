@@ -1,4 +1,4 @@
-function solve(n, arr) {
+function reverseAnArrayOfNumbers(n, arr) {
   let res = [];
   let finalRes = [];
 
@@ -13,4 +13,4 @@ function solve(n, arr) {
   console.log(finalRes.join(" "));
 }
 
-solve(3, [10, 20, 30, 40, 50]);
+reverseAnArrayOfNumbers(3, [10, 20, 30, 40, 50]);
