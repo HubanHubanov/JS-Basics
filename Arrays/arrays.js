@@ -1,16 +1,20 @@
-function solve(n, arr) {
-  let res = [];
-  let finalRes = [];
+function arrays(arr) {
 
-  for (let i = 0; i < n; i++) {
-    res.push(arr[i]);
-  }
+ a = 11
+ b = 10
 
-  for (let i = res.length - 1; i >= 0; i--) {
-    finalRes.push(res[i]);
-  }
+//  if (a < b) {
+//   console.log("yes");
+//  } else {
+//   console.log("no");
+//  }
+let isTrue = false
 
-  console.log(finalRes.join(" "));
+a < b ? isTrue = true : isTrue
+
+console.log(isTrue);
+
 }
 
-solve(3, [10, 20, 30, 40, 50]);
+arrays(['abc', 'def', 'hig',
+'klm', 'nop'])
