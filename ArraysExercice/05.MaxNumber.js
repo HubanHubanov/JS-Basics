@@ -9,6 +9,7 @@ function maxNumber(arr) {
 
       if (currNum <= nextNum) {
         isNotBigger = true;
+        break;
       }
     }
     if (!isNotBigger) {
