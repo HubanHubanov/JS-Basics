@@ -2,16 +2,11 @@ function arrayRotation(arr, numRotation) {
   let rotation = 0;
   let resArr = [];
 
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < numRotation; i++) {
     let currNum = arr[i];
-    rotation++;
-
-    if (rotation <= numRotation) {
+    
       arr.push(currNum);
-    } else {
-      break;
-    }
-    console.log(arr);
+    
   }
 
   for (let s = numRotation; s < arr.length; s++) {
