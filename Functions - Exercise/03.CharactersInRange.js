@@ -1,30 +1,19 @@
 function charactersInRange(firstCharacter, secondCharacter) {
+  let firstCharactarInAscii = firstCharacter.charCodeAt();
+  let secondCharacterAscii = secondCharacter.charCodeAt();
 
-  let firstCharacterAscii = firstCharacter.charCodeAt(0);
-  let secondCharacterAscii = secondCharacter.charCodeAt(0);;
+  let smallerNumber = Math.min(firstCharactarInAscii, secondCharacterAscii);
+  let biggestNumber = Math.max(firstCharactarInAscii, secondCharacterAscii);
 
-  let result = "";
+  let resultArr = [];
 
-  if (firstCharacterAscii < secondCharacterAscii) {
+  for (let i = smallerNumber + 1; i < biggestNumber; i++) {
+    let numAsAsciiChar = String.fromCharCode(i);
 
-    for (let i = firstCharacterAscii + 1; i < secondCharacterAscii; i++) {
-
-      let asciiNumToCharacter = String.fromCharCode(i);
-
-      result += asciiNumToCharacter + " ";
-    }
-
-  } else if (firstCharacterAscii > secondCharacterAscii) {
-
-    for (let i = secondCharacterAscii + 1; i < firstCharacterAscii; i++) {
-      
-      let asciiNumToCharacter = String.fromCharCode(i);
-
-      result += asciiNumToCharacter + " ";
-    }
+    resultArr.push(numAsAsciiChar);
   }
 
-  return result
+  return resultArr.join(" ");
 }
 
 console.log(charactersInRange("a", "d"));
@@ -32,4 +21,3 @@ console.log(charactersInRange("a", "d"));
 console.log(charactersInRange("#", ":"));
 
 console.log(charactersInRange("C", "#"));
-
