@@ -15,7 +15,7 @@ function houseParty(arr) {
     } else {
 
       if (resArr.includes(name)) {
-        resArr = resArr.filter((a) => a !== name);
+        resArr = resArr.filter((a) => a !== name);``
       } else {
         console.log(`${name} is not in the list!`);
       }
